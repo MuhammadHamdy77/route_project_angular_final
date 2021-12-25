@@ -1,0 +1,6 @@
+.box-shadow-profile{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgba(245, 245, 220, 0.434);
+    padding: 20px 0;
+    border-radius: 10px;
+}

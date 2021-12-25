@@ -1,0 +1,60 @@
+.img-details-movies{
+    border: 1px solid #eee;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 75%;
+    overflow: hidden;
+}
+
+.img-details-movies img{
+    position: relative;
+    left: 20px;
+    top: 10px;
+    border-radius: 5px;
+    
+}
+
+.img-details-movies::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff40;
+    z-index: 10;
+    left: 20px;
+    top: 10px;
+    border-radius: 5px;
+    transform: scale(0);
+    /* transform: rotate(0); */
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+.img-details-movies:hover::before{
+    opacity: 1;
+    transform: scale(1);
+    /* transform: rotate(360deg); */
+}
+
+.title-movies-details{
+    color: #ffc107;
+    font-size: 30px;
+    font-family: cursive;
+    display: inline-block;
+    letter-spacing: -2px;
+}
+
+.content-movies-details{
+    font-family: 'Montserrat Alternates', sans-serif;
+    width: 80%;
+    margin: auto;
+}
+
+.netflix-links{
+    display: inline-block;
+    margin-right: 20px;
+}
+.netflix-links img{
+border-radius: 5px;
+width: 100px;
+}

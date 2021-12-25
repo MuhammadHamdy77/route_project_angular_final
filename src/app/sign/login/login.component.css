@@ -1,0 +1,48 @@
+.bg-login-form{
+    background-image: url("../../../assets/images/bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-layer-login-form{
+    background-color: rgba(0,0,0,0.6);
+}
+
+.bg-form-login-child-left{
+    background-color: rgba(0,0,0,0.8);
+    padding: 30px;
+    width: 80%;
+    margin: auto
+}
+.bg-form-login-child-left input{
+  
+    background-color: transparent;
+    color: #fff;
+
+}
+
+.bg-form-login-child-right{
+    opacity: .6;
+}
+
+.google-login button{
+    background-color: white;
+    border: none;
+    padding: 2px 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.face-login button{
+    background-color: white;
+    border: none;
+    padding: 2px 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.google-login button img {
+    width: 20px;
+}
+.face-login button img{
+    width: 30px;
+}

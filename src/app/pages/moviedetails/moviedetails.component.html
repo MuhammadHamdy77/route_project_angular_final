@@ -1,0 +1,22 @@
+<div class="contaianer">
+    <div class="row">
+        <div class="col-md-5">
+         <div class="img-details-movies">
+            <img [src]="imgPrefix+movieDetailss?.poster_path" alt="" class="w-100"> <!-- backdrop_path -->
+         </div>
+        </div>
+        <div class="col-md-7 px-5">
+            <h2 class="title-movies-details">{{movieDetailss?.belongs_to_collection.name}}</h2>
+            <p class="content-movies-details">{{movieDetailss?.overview}}</p>
+            <div class="details mt-5">
+                <span class="badge badge-info text-uppercase mx-2">{{movieDetailss?.original_language}}</span>
+                <span class="badge badge-danger text-uppercase mx-2">{{movieDetailss?.production_companies[0].origin_country}}</span>
+                <span class="badge badge-primary text-uppercase mx-2">{{movieDetailss?.release_date | date}}</span>
+                <span class="badge badge-warning text-uppercase mx-2">{{movieDetailss?.runtime}} Min</span>
+                <span class="badge badge-success text-uppercase mx-2">Vote Count: {{movieDetailss?.vote_count}} </span>
+                <a class="netflix-links" target="_blank" href="{{movieDetailss?.homepage}}"><img src="assets/images/netflix.png" alt=""></a>
+            </div>
+
+        </div>
+    </div>
+</div>

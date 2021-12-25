@@ -1,0 +1,27 @@
+.navbar-brand{
+    font-family: 'Tajawal', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+.navbar-brand span{
+    color: #ffc107;
+    margin-left: -10px;
+    font-size: 30px;
+    font-family: 'Fruktur', cursive;
+}
+.social-media  i{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.logoutBbtn:hover{
+
+    font-size: 1rem;
+}
+
+.navbar-toggler{
+    background-color: #c0c0c0;
+    border: 1px solid #c0c0c0;
+}

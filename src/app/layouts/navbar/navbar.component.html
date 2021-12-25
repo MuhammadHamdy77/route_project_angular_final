@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-sm">
+<a class="navbar-brand" href="#">Moka <span>MH</span></a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ng-container  *ngIf="_global.isAuthed">
+
+            <ul class="navbar-nav mr-auto ml-5 mt-2 mt-lg-0 d-flex justify-content-end">
+                    
+            
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="home">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="profile">profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="alluser">All User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="pizza">Pizza & Pasta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="sport">Sport</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="news">News</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+    </ng-container>
+
+        <ul class="navbar-nav ml-auto  mt-2 mt-lg-0 d-flex justify-content-around">
+        <ng-container  *ngIf="!_global.isAuthed">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="register">Register</a>
+                </li>
+        </ng-container>
+
+        <ng-container  *ngIf="_global.isAuthed">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-danger logoutBbtn" (click)="logout()">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-info mx-2 logoutBbtn" routerLink="settings" routerLinkActive="router-link-active" >Setting</a>
+                </li>
+        </ng-container>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,44 @@
+<app-headerhome [trendingMovies]="trendingMovies"></app-headerhome>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-4 d-flex align-items-center">
+           <div class="">
+            <div class="brdr mb-4 w-25"></div>
+            <h2 class="f-family-Lobster">Trending Movies To Watch Right Now</h2>
+            <p class="text-muted f-family-Lobster">Most Watched Movies by Days</p>
+            <div class="brdr mt-4 w-50"></div>
+           </div>
+        </div>
+        <div class="col-md-2 mb-4" *ngFor="let movie of trendingMovies">
+            <div class="img-movies">
+
+                <a [routerLink]="['/moviedetails' , movie.id]">
+                    <img [src]="imgPrefix+movie.poster_path" alt="{{movie.title}}" class="img-fluid">
+                    <h3 class="h6 f-family-yeon-sung title-films">{{movie.title}}</h3>
+                    <div class="vote-average">{{movie.vote_average}}</div>
+                    
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 d-flex align-items-center">
+            <div class="">
+             <div class="brdr mb-4 w-25"></div>
+             <h2 class="f-family-Lobster">Trending People To Watch Right Now</h2>
+             <p class="text-muted f-family-Lobster">Most Watched People by Days</p>
+             <div class="brdr mt-4 w-50"></div>
+            </div>
+         </div>
+        <div class="col-md-2 mb-4" *ngFor="let person of trendingPeople">
+            <div class="img-movies">
+                <a [routerLink]="['/persondetails' , person.id]">
+                    <img [src]="imgPrefix+person.profile_path" alt="{{person.name}}" class="img-fluid">
+                    <h3 class="h6 f-family-yeon-sung title-films">{{person.name}}</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container my-5">
+    <div class="row box-shadow-profile">
+        <div class="col-md-6 text-center">
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <p class="card-text badge badge-warning p-2">Name :  {{userData.data?.name}}</p>
+                <p class="card-text badge badge-primary p-2">E-Mail :  {{userData.data?.email}}</p>
+                <p class="card-text badge badge-info p-2">ID :  {{userData.data?._id}}</p>
+                <p class="card-text badge badge-danger p-2">Phone :  {{userData.data?.phone}}</p>
+                <p class="card-text badge badge-dark p-2 ml-2">Gender :  {{userData.data?.gender}}</p>
+                <p class="card-text badge badge-success p-2 ml-2">Age :  {{userData.data?.age}}</p>
+              </div>
+        </div>
+        <div class="col-md-6  text-center">
+            <div class="card text-center" style="width: 18rem;">
+                <img src="assets/images/avatar.png" class="card-img-top" alt="...">
+            </div>
+        </div>
+
+    </div>
+</div>

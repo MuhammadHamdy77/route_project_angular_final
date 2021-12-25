@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+.navbar-brand{
+    font-family: 'Tajawal', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar-brand span{
+    color: #ffc107;
+    margin-left: -10px;
+    font-size: 30px;
+    font-family: 'Fruktur', cursive;
+}
+.logoutBbtn:hover{
+
+    font-size: 1rem;
+}
+.movies-footer-links li{
+
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.1);
+    transition: all .3s ease-in-out;
+    width: 225px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(255 255 255 / 50%);
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.movies-footer-links li:hover{
+    transform: scale(0.90);
+}
+
+.social-media i{
+    font-size: 25px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    padding: 5px;
+    
+}
+.social-media i:hover{
+    background-color: rgba(46, 46, 46, 0.6);
+    border-radius: 5px;
+    transform: translateY(-10px);
+}
+footer{
+    overflow: hidden;
+}
+footer .container-fluid{
+    padding-right:0;
+    padding-left:0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.copyright p{
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.copyright p span{
+    color: rgb(255, 173, 21);
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    padding-left: 5px;
+}
+.copyright p span:hover{
+   
+    padding-left: 20px;
+}
+
+.navbar-brand:not(:first-of-type){
+    font-size: 25px;
+}
+.navbar-brand:not(:first-of-type) span{
+    font-size: 20px !important;
+}
+
+.animations-footer{
+
+    -webkit-animation: logoBrand 5s infinite; 
+    -moz-animation:    logoBrand 5s infinite; 
+    -o-animation:      logoBrand 5s infinite; 
+    animation:         logoBrand 5s infinite; 
+}
+
+@keyframes logoBrand{
+    0%{
+
+        transform: translateX(40px)
+    }
+    50%{
+        transform: translateX(-40px)
+    }
+    75%{transform: translateX(100px)}
+    100%{transform: translateX(-100px)}
+    
+}

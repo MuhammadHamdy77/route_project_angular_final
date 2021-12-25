@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mb-5" *ngFor="let news of cartona">
+           <div class="card-news">
+              <a href="{{news.url}}" target="_blank"> <img src="{{news.urlToImage}}" class="img-fluid img-news" alt=""></a>
+               <div class="caption-news mt-1">
+                  <span class="badge badge-info author-news">{{news.author}}</span>
+                  <span class="badge badge-warning author-news ml-2">{{news.publishedAt}}</span>
+                  <p class="title-news">{{news.title}}</p>
+                  <p class="desc-news">{{news.description}}</p>
+                  <p class="desc-news">{{news.content}}</p>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <span class="name-details">{{allDetails.name}} , {{allDetails.also_known_as[6]}}</span>
+            <span class="depart-details">{{allDetails.known_for_department}}</span>
+            <span class="birthday-details">{{allDetails.birthday}}</span>
+
+            <button class="homepage-details">
+                <a href="{{allDetails.homepage}}">{{allDetails.name}} &nbsp; Profile</a>
+                <i class="fas fa-caret-right"></i>
+            </button>
+
+            <p class="place-details">{{allDetails.place_of_birth}}</p>
+            <p class="content-details">{{allDetails.biography}}</p>
+        </div>
+        <div class="col-md-5 p-5">
+           <div class="img-person-details">
+             <img [src]="imgPrefix+allDetails?.profile_path" alt="" class="w-100">
+           </div>
+        </div>
+    </div>
+</div>

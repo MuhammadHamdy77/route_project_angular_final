@@ -1,0 +1,61 @@
+
+<div class="container-fluid bg-login-form m-auto">
+    <div class="row bg-layer-login-form">
+        <div class="col-md-8 p-0 m-auto">
+            
+            <div class="bg-form-login-child-left">
+
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <div class="google-login">
+                            <button>
+                                <img src="assets/images/google-logo-9814.png" alt="" class="img-fluid">
+                                <span class="mx-2"> Login With Google !</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="face-login">
+                            <button>
+                                <img src="assets/images/face.png" alt="" class="img-fluid">
+                                <span class="mx-2"> Login With Facebook !</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <form class="loginForm" method="post" [formGroup]="loginForm" >
+                    <div class="alert alert-danger" *ngIf="errorsLogin">
+                        {{errorsLogin}}
+                    </div>
+                    <div class="form-group">
+                      <label for="email">User Mail</label>
+                      <input type="email" name="email" formControlName="email" id="email" class="form-control" placeholder="E-Mail" >
+                        <div class="alert alert-danger my-1" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                            <p *ngIf="email?.errors?.required">! E-mail is Required</p>
+                            <p *ngIf="email?.errors?.email">! Invalid Email</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input type="password" name="pass" formControlName="password" id="pass" class="form-control" placeholder="Password" >
+                        <div class="alert alert-danger my-1" *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+                            <p *ngIf="password?.errors?.required">! password is Required</p>
+                            <p *ngIf="password?.errors?.min">! password minimum 6 charc</p>
+                            <p *ngIf="password?.errors?.pattern">! password is Poor</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button (click)="loginUser()" class="btn btn-info"> Login Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- <div class="col-md-5 p-0">
+            <div class="bg-form-login-child-right">
+                <img src="assets/images/form-login.jfif" alt="" class="img-fluid">
+            </div>
+        </div> -->
+    </div>
+</div>

@@ -1,0 +1,58 @@
+.f-family-Lobster{
+    font-family: 'Lobster', cursive;
+}
+.f-family-yeon-sung
+{
+    font-family: 'Yeon Sung', cursive;
+}
+.brdr{
+    background-color: #515151;
+    height: 1px;
+}
+.img-movies{
+    /* border: 1px solid #eee; */
+    box-shadow: #334756 0px 3px 8px;
+    margin-bottom: 10px;
+    padding: 5px;
+    transition: all .3s ease;
+    overflow: hidden;
+    position: relative;
+}
+.img-movies img{
+    transition: all .3s ease;
+    z-index: 1;
+}
+.img-movies:hover img{
+
+    cursor:pointer;
+    transform: translateY(-40px);
+}
+.title-films{
+    z-index: 2;
+    position: absolute;
+    transition: all .5s ease;
+    transition-delay: .1s;
+    transform: translateY(40px);
+}
+.img-movies:hover .title-films{
+    transform: translateY(-30px);
+
+}
+
+.vote-average {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    z-index: 4;
+    background-color: #cddc39;
+    border-top-right-radius: 5px;
+    color: #333;
+    font-weight: 500;
+    padding: 8px;
+    transition: all .5s ease;
+    transition-delay: .1s;
+}
+.img-movies:hover .vote-average {
+    
+    transform: translateX(110px);
+}

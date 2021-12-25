@@ -1,0 +1,77 @@
+.pizza-back{
+    background-image: url("../../../assets/images/menu-4-6.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+    
+
+}
+
+.overlay{
+    background-color: rgba(0,0,0,0.6);
+}
+
+.pizza-img{
+    height: 250px;
+    width: 238px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    position: relative;
+}
+
+.pizza-img:hover{
+    transform: scale(0.90);
+    transform: rotateY(35deg);
+}
+
+.title-pizza{
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.badge-rgba{
+    background: rgb(255 255 255 / 0.7) !important;
+    color: #333;
+    padding: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.badge-rgba:hover{
+    transform: translateY(10px);
+}
+
+.publisher{
+    background-color: #0aff8e;
+    color: #333;
+    padding: 5px;
+    display: block;
+    width: 200px;
+    margin: 2px
+ auto;
+}
+
+.badge-social_rank{
+ 
+    background-color: #0062cc;
+    width: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    left: 38px;
+    top: 15px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 0 8px rgb(0 0 0 / 60%);
+    line-height: 34px;
+    
+}

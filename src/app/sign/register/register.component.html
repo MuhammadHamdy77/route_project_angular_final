@@ -1,0 +1,82 @@
+<div class="container-fluid bgFilms ">
+
+<div class="row bg-layouts ">
+    
+    <div class="col-md-12">
+
+        <div class="form-register">
+            <form [formGroup]="registerForm"  method="post" (ngSubmit)="submitFormRegister(registerForm)">
+                <div *ngIf="emailError" class="alert alert-danger">
+                    {{emailError}}
+                </div>
+                <div class="form-group">
+                  <label for="name">User Name</label>
+                  <input type="text" formControlName="name" name="name" id="name" class="form-control" placeholder="User Name" required>
+                  
+                  <div class="alert alert-danger my-2" *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+                      <p *ngIf="name?.errors?.required">User Name Is Required !</p>
+                      <p *ngIf="name?.errors?.minlength">Minimun Length Charc 4</p>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input type="email" formControlName="email" ame="email" id="email" class="form-control" placeholder="E-Mail">
+                  
+                    <div class="alert alert-danger my-2" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                        <p *ngIf="name?.errors?.required">Email Is Required !</p>
+                        <p *ngIf="name?.errors?.email">E-mail Invalid !</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" formControlName="password"  name="password" id="password" class="form-control" placeholder="Password">
+                    
+                    <div class="alert alert-danger" *ngIf="password?.invalid && (password?.touched || password?.dirty)">
+                        <p *ngIf="password?.errors?.required">Password Is Required</p>
+                        <p *ngIf="password?.errors?.pattern">Password Is poor</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="phone" formControlName="phone"  name="phone" id="phone" class="form-control" placeholder="Phone:">
+                    
+                    <div class="alert alert-danger" *ngIf="phone?.invalid && (phone?.touched || phone?.dirty)">
+                        <p *ngIf="phone?.errors?.required">Phone Is Required</p>
+                        <p *ngIf="phone?.errors?.minlength">Phone is short number Egypt</p>
+                        <p *ngIf="phone?.errors?.maxlength">Phone Is longerthan number Egpt</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" formControlName="age"  name="age" id="age" class="form-control" placeholder="Age">
+                
+                    <div class="alert alert-danger" *ngIf="age?.invalid && (age?.touched || age?.dirty)">
+                        <p *ngIf="age?.errors?.required">Age Is Required</p>
+                        <p *ngIf="age?.errors?.min"> Sign Up Person Adult +18 </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                   <select class="form-control"  formControlName="gender" name="gender" id="gender">
+                       <option selected disabled>Select Gender</option>
+                       <option  value="male">Male</option>
+                       <option  value="female">Female</option>
+                   </select>
+                   <div class="alert alert-danger" *ngIf="gender?.invalid && (gender?.touched|| gender?.dirty)">
+                       <p *ngIf="gender?.errors?.required">Gender Is Required</p>
+                   </div>
+                </div>
+               
+                <div class="form-group">
+                    <button type="submit" class="btn btn-outline-warning">Register Now !</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

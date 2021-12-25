@@ -1,0 +1,20 @@
+
+
+<div class="pizza-back">
+    <div class="overlay">
+
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-md-3 mb-5 text-center" *ngFor="let pizza of pizzaBox">
+                    <a href="{{pizza.source_url}}" target="_blank">
+                        <img src="{{pizza.image_url}}" class="img-fluid pizza-img" alt="">
+                    </a>
+                   <p class="badge badge-rgba my-2 title-pizza">{{pizza.title}}</p>
+                   <span class="badge badge-warning">Recipe: {{pizza.recipe_id}}</span>
+                   <p class="badge publisher">Publisher: {{pizza.publisher}}</p>
+                   <div class="social_rank badge badge-social_rank">{{pizza.social_rank}}</div>
+                </div>
+            </div>
+         </div>
+    </div>
+</div>
